@@ -46,10 +46,10 @@ namespace StoreManagementApi.Implimentations
                 SqlConnection sqlCon = dbConnection.Connect();
                 switch (customer?.action?.ToLower())
                 {
-                    // case "register":
-                    //     query = "INSERT INTO CustomerTable (firstName, middleName, lastName, email, contact, phyAddress,createdDate,isActive) "
-                    //                         + "VALUES (@firstName, @middleName, @lastName, @email, @contact, @phyAddress, @createdDate,@isActive)";
-                    //     break;
+                    case "register":
+                        query = "INSERT INTO CustomerTable (firstName, middleName, lastName, email, contact, phyAddress,createdDate,isActive) "
+                                            + "VALUES (@firstName, @middleName, @lastName, @email, @contact, @phyAddress, @createdDate,@isActive)";
+                        break;
                     case "edit":
                         query = $@"UPDATE  CustomerTable  
                                SET firstName = @firstName, middleName= @middleName, lastName = @lastName, email=@email,isActive=@isActive,
